@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NexCart – The Future of Smart Shopping</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+<!-- Opening animation -->
+<div id="intro">
+  <div class="intro-logo"><img src="logo.png" alt="NexCart logo"><span class="shine"></span></div>
+  <div class="intro-bar"><i></i></div>
+</div>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <a class="wordmark" href="#top">Nex<span>Cart</span></a>
+  <nav class="links">
+    <a href="#shop">Shop</a>
+    <a href="#deal">Deals</a>
+    <a href="#why">Why NexCart</a>
+    <a href="#join">Newsletter</a>
+  </nav>
+  <button class="cart-btn" id="openCart" aria-label="Open cart">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 7H6"/></svg>
+    <b id="cartCount">0</b>
+  </button>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob b1"></div><div class="blob b2"></div>
+    <div class="hero-text">
+      <p class="pill">Free delivery on orders over $50</p>
+      <h1>Shop smarter.<br>Get it <em>faster.</em></h1>
+      <p class="lead">Hand-picked tech, fashion and home essentials, delivered to your door in two days.</p>
+      <div class="cta">
+        <a href="#shop" class="btn primary">Shop now</a>
+        <a href="#deal" class="btn ghost">See today's deal</a>
+      </div>
+      <ul class="stats">
+        <li><b>50k+</b> happy customers</li>
+        <li><b>4.9</b> average rating</li>
+        <li><b>2-day</b> delivery</li>
+      </ul>
+    </div>
+    <div class="hero-visual" id="tilt">
+      <div class="float-card c1"><span>🎧</span><div><b>Aero Earbuds</b><small>$79</small></div></div>
+      <div class="float-card c2"><span>⌚</span><div><b>Pulse Watch</b><small>$149</small></div></div>
+      <div class="float-card c3"><span>👟</span><div><b>Trail Runner</b><small>$92</small></div></div>
+      <div class="orb"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee"><div class="track">
+    <span>Electronics</span><span>Fashion</span><span>Home</span><span>Beauty</span><span>Secure checkout</span><span>Easy returns</span>
+    <span>Electronics</span><span>Fashion</span><span>Home</span><span>Beauty</span><span>Secure checkout</span><span>Easy returns</span>
+  </div></div>
+
+  <!-- Products -->
+  <section class="section" id="shop">
+    <div class="head">
+      <h2>Featured products</h2>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- Deal -->
+  <section class="deal" id="deal">
+    <div>
+      <h2>Weekend deal: 25% off smart tech</h2>
+      <p>Use code <b>NEX25</b> at checkout. Offer ends in:</p>
+    </div>
+    <div class="timer" id="timer">
+      <div><b id="d">00</b><small>days</small></div>
+      <div><b id="h">00</b><small>hours</small></div>
+      <div><b id="m">00</b><small>mins</small></div>
+      <div><b id="s">00</b><small>secs</small></div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="section" id="why">
+    <div class="head"><h2>Why shoppers choose NexCart</h2></div>
+    <div class="why">
+      <article><i>🚚</i><h3>Fast delivery</h3><p>Order today and receive it in two days, tracked all the way.</p></article>
+      <article><i>🔒</i><h3>Secure payments</h3><p>Your card details are encrypted and never stored.</p></article>
+      <article><i>↩️</i><h3>30-day returns</h3><p>Not right for you? Send it back free within 30 days.</p></article>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="join" id="join">
+    <h2>Get 10% off your first order</h2>
+    <p>Join our list for new arrivals and members-only offers.</p>
+    <form id="newsForm">
+      <input type="email" placeholder="Enter your email" required aria-label="Email address">
+      <button class="btn primary" type="submit">Join now</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <a class="wordmark" href="#top">Nex<span>Cart</span></a>
+  <p>The Future of Smart Shopping.</p>
+  <small>&copy; 2026 NexCart. All rights reserved.</small>
+</footer>
+
+<!-- Cart drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your cart</h3><button id="closeCart" aria-label="Close cart">&times;</button></div>
+  <div class="items" id="items"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>Total</span><b id="total">$0</b></div>
+    <button class="btn primary full" id="checkout">Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
